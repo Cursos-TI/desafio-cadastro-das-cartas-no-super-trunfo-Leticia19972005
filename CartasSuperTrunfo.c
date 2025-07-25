@@ -1,6 +1,6 @@
 
    #include <stdio.h>
-// Desafia Super_Trunfo
+// Desafio Super_Trunfo
 int main() {
     char E1, E2;
     char CO1 [6], CO2 [10];
