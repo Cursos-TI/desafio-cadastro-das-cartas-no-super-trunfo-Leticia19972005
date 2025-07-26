@@ -1,16 +1,15 @@
+#include <stdio.h>
 
-   #include <stdio.h>
-// Desafio Super_Trunfo
 int main() {
     char E1, E2;
     char CO1 [6], CO2 [10];
     char C1 [60], C2 [60];
     int P1, P2, T1, T2;
-    float A1, A2, PIB1, PIB2;
+    float A1, A2, PIB1, PIB2, DP1, DP2, PP1, PP2;
 
     printf("Cadastramento de cartas!\n");
 
-    printf("\nInsira os dados das carta 1(C1) e 2(C2):\n");
+    printf("\nInsira os dados das cartas 1 e 2:\n");
     printf("\nEstado ('A' a 'H'):\n");
     printf("Carta 1:");
     scanf(" %c", &E1);
@@ -53,6 +52,11 @@ int main() {
     printf("Carta 2:");
     scanf("%d", &T2);
 
+    DP1 = (float) P1/A1;
+    DP2 = (float) P2/A2;
+    PP1 = (float) PIB1/P1;
+    PP2 = (float) PIB2/P2;
+
     printf("\nCarta 1:\n");
     printf("Estado:%c\n", E1);
     printf("Código:%s\n", CO1);
@@ -61,6 +65,8 @@ int main() {
     printf("Área(Km²):%.2f\n", A1);
     printf("PIB:%.2f\n", PIB1);
     printf("Número de pontos turísticos:%d\n", T1);
+    printf("Densidade populacional:%.2f\n", DP1);
+    printf("PIB per Capita:%.2f\n", PP1);
 
     printf("\nCarta 2:\n");
     printf("Estado:%c\n", E2);
@@ -70,8 +76,9 @@ int main() {
     printf("Área(Km²):%.2f\n", A2);
     printf("PIB:%.2f\n", PIB2);
     printf("Número de pontos turísticos:%d\n", T2);
+    printf("Densidade populacional:%.2f\n", DP2);
+    printf("PIB per Capita:%.2f\n", PP2);
 
     printf("\nCartas catalogadas com sucesso! ;)");
     return 0;
 }
-
