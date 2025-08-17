@@ -1,11 +1,10 @@
-#include <stdio.h>
-
 int main() {
     char E1, E2;
     char CO1 [5], CO2 [5];
-    char C1 [4], C2 [4];
-    int P1, P2, T1, T2;
-    float A1, A2, PIB1, PIB2, DP1, DP2, PP1, PP2, SP1,SP2;
+    char C1 [40], C2 [40];
+    unsigned long int P1, P2;
+    int T1, T2;
+    float A1, A2, PIB1, PIB2, DP1, DP2, PP1, PP2, SP1, SP2;
 
     printf("Cadastramento de cartas!\n");
 
@@ -19,20 +18,24 @@ int main() {
     printf("Código (Estado + 01 a 04.Ex:B03):\n");
     printf("Carta 1:");
     scanf(" %s", CO1);
+    getchar();
     printf("Carta 2:");
     scanf(" %s", CO2);
+    getchar();
 
-    printf("Nome da cidade(Sigla. Ex:RJ):\n");
+    printf("Nome da cidade:\n");
     printf("Carta 1:");
-    scanf("%s", C1);
+    fgets(C1,40,stdin);
+    getchar();
     printf("Carta 2:");
-    scanf("%s", C2);
+    fgets(C2,40,stdin);
+    getchar();
 
     printf("Número de habitantes da cidade:\n");
     printf("Carta 1:");
-    scanf(" %d", &P1);
+    scanf(" %lu", &P1);
     printf("Carta 2:");
-    scanf(" %d", &P2);
+    scanf(" %lu", &P2);
 
     printf("Área(Km²) da cidade:\n");
     printf("Carta 1:");
@@ -63,23 +66,25 @@ int main() {
     printf("Estado:%c\n", E1);
     printf("Código:%s\n", CO1);
     printf("Cidade:%s\n", C1);
-    printf("População:%d\n", P1);
+    printf("População:%lu\n", P1);
     printf("Área(Km²):%.2f\n", A1);
     printf("PIB:%.2f\n", PIB1);
     printf("Número de pontos turísticos:%d\n", T1);
     printf("Densidade populacional:%.2f\n", DP1);
     printf("PIB per Capita:R$%.2f\n", PP1);
+    printf("Super poder:%.2f\n", SP1);
 
     printf("\nCarta 2:\n");
     printf("Estado:%c\n", E2);
     printf("Código:%s\n", CO2);
     printf("Cidade:%s\n", C2);
-    printf("População:%d\n", P2);
+    printf("População:%lu\n", P2);
     printf("Área(Km²):%.2f\n", A2);
     printf("PIB:%.2f\n", PIB2);
     printf("Número de pontos turísticos:%d\n", T2);
     printf("Densidade populacional:%.2f\n", DP2);
     printf("PIB per Capita:R$%.2f\n", PP2);
+    printf("Super poder:%.2f\n", SP2);
 
     printf("\nComparação de cartas:\n");
     printf("População:Carta 1 venceu(%d)\n", (P1>P2));
